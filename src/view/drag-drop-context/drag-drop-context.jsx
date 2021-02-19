@@ -4,8 +4,9 @@ import type { Responders, ContextId, Sensor } from '../../types';
 import ErrorBoundary from './error-boundary';
 import preset from '../../screen-reader-message-preset';
 import App from './app';
-import useUniqueContextId, {
+import {
   reset as resetContextId,
+  useInstanceCount,
 } from './use-unique-context-id';
 import { reset as resetUniqueIds } from '../use-unique-id';
 
@@ -30,7 +31,7 @@ export function resetServerContext() {
 }
 
 export default function DragDropContext(props: Props) {
-  const contextId: ContextId = useUniqueContextId();
+  const contextId: ContextId = useInstanceCount();
   const dragHandleUsageInstructions: string =
     props.dragHandleUsageInstructions || preset.dragHandleUsageInstructions;
 

@@ -62,11 +62,13 @@ type Props = {|
   listType?: string,
   internalScroll?: boolean,
   isCombineEnabled?: boolean,
+  isCombineOnly?: boolean,
 |};
 
 export default class AuthorList extends Component<Props> {
   static defaultProps = {
     isCombineEnabled: false,
+    isCombineOnly: false,
   };
   renderBoard = (dropProvided: DroppableProvided) => {
     const { quotes } = this.props;

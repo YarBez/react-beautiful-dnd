@@ -15,6 +15,7 @@ export const homeOwnProps: OwnProps = {
   mode: preset.home.descriptor.mode,
   isDropDisabled: false,
   isCombineEnabled: false,
+  isCombineOnly: false,
   direction: preset.home.axis.direction,
   ignoreContainerClipping: false,
   children: () => null,

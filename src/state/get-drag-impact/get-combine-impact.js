@@ -35,7 +35,7 @@ export default ({
   insideDestination,
   afterCritical,
 }: Args): ?DragImpact => {
-  if (!destination.isCombineEnabled) {
+  if (!destination.isCombineEnabled && !destination.isCombineOnly) {
     return null;
   }
   const axis: Axis = destination.axis;

@@ -19,6 +19,7 @@ const Root = styled.div`
 type Props = {|
   initial: Quote[],
   isCombineEnabled?: boolean,
+  isCombineOnly?: boolean,
   listStyle?: Object,
 |};
 
@@ -69,6 +70,7 @@ export default function QuoteApp(props: Props) {
           style={props.listStyle}
           quotes={quotes}
           isCombineEnabled={props.isCombineEnabled}
+          isCombineOnly={props.isCombineOnly}
         />
       </Root>
     </DragDropContext>

@@ -8,6 +8,7 @@ export default (dimension: DroppableDimension): OwnProps => ({
   type: dimension.descriptor.type,
   isDropDisabled: false,
   isCombineEnabled: true,
+  isCombineOnly: true,
   direction: dimension.axis.direction,
   ignoreContainerClipping: false,
   children: () => null,

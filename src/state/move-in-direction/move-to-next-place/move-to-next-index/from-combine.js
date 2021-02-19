@@ -26,7 +26,7 @@ export default ({
   combine,
   afterCritical,
 }: Args): ?number => {
-  if (!destination.isCombineEnabled) {
+  if (!destination.isCombineEnabled && !destination.isCombineOnly) {
     return null;
   }
   const combineId: DraggableId = combine.draggableId;

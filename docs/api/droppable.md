@@ -32,6 +32,7 @@ type Props = {|
   mode?: DroppableMode,
   isDropDisabled?: boolean,
   isCombineEnabled?: boolean,
+  isCombineOnly?: boolean,
   direction?: Direction,
   ignoreContainerClipping?: boolean,
   renderClone?: DraggableChildrenFn,

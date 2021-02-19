@@ -40,6 +40,7 @@ export default function Droppable(props: Props) {
     ignoreContainerClipping,
     isDropDisabled,
     isCombineEnabled,
+    isCombineOnly,
     // map props
     snapshot,
     useClone,
@@ -85,6 +86,7 @@ export default function Droppable(props: Props) {
     direction,
     isDropDisabled,
     isCombineEnabled,
+    isCombineOnly,
     ignoreContainerClipping,
     getDroppableRef,
   });

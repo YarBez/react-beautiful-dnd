@@ -40,6 +40,7 @@ type Props = {|
   direction: Direction,
   isDropDisabled: boolean,
   isCombineEnabled: boolean,
+  isCombineOnly: boolean,
   ignoreContainerClipping: boolean,
   getDroppableRef: () => ?HTMLElement,
 |};
@@ -147,6 +148,7 @@ export default function useDroppablePublisher(args: Props) {
         direction: previous.direction,
         isDropDisabled: previous.isDropDisabled,
         isCombineEnabled: previous.isCombineEnabled,
+        isCombineOnly: previous.isCombineOnly,
         shouldClipSubject: !previous.ignoreContainerClipping,
       });
 
@@ -280,4 +282,16 @@ export default function useDroppablePublisher(args: Props) {
       args.isCombineEnabled,
     );
   }, [args.isCombineEnabled, marshal]);
+
+  // update is combine only with the marshal
+  // only need to update when there is a drag
+  useLayoutEffect(() => {
+    if (!whileDraggingRef.current) {
+      return;
+    }
+    marshal.updateDroppableIsCombineOnly(
+      publishedDescriptorRef.current.id,
+      args.isCombineOnly,
+    );
+  }, [args.isCombineOnly, marshal]);
 }

@@ -123,7 +123,6 @@ export default ({
 
   const draggingState: DraggingState = {
     // appeasing flow
-    phase: 'DRAGGING',
     ...state,
     // eslint-disable-next-line
     phase: 'DRAGGING',
@@ -145,7 +144,6 @@ export default ({
 
   const dropPending: DropPendingState = {
     // appeasing flow
-    phase: 'DROP_PENDING',
     ...draggingState,
     // eslint-disable-next-line
     phase: 'DROP_PENDING',

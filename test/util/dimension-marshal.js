@@ -6,6 +6,7 @@ import {
   updateDroppableScroll,
   updateDroppableIsEnabled,
   updateDroppableIsCombineEnabled,
+  updateDroppableIsCombineOnly,
   collectionStarting,
 } from '../../src/state/action-creators';
 import type {
@@ -25,6 +26,7 @@ export const createMarshal = (
       updateDroppableScroll,
       updateDroppableIsEnabled,
       updateDroppableIsCombineEnabled,
+      updateDroppableIsCombineOnly,
     },
     dispatch,
   );
@@ -36,6 +38,7 @@ export const getMarshalStub = (): DimensionMarshal => ({
   updateDroppableScroll: jest.fn(),
   updateDroppableIsEnabled: jest.fn(),
   updateDroppableIsCombineEnabled: jest.fn(),
+  updateDroppableIsCombineOnly: jest.fn(),
   scrollDroppable: jest.fn(),
   startPublishing: jest.fn(),
   stopPublishing: jest.fn(),
@@ -46,5 +49,6 @@ export const getCallbacksStub = (): Callbacks => ({
   updateDroppableScroll: jest.fn(),
   updateDroppableIsEnabled: jest.fn(),
   updateDroppableIsCombineEnabled: jest.fn(),
+  updateDroppableIsCombineOnly: jest.fn(),
   collectionStarting: jest.fn(),
 });

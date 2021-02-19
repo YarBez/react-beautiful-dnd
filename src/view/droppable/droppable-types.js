@@ -63,6 +63,7 @@ export type DefaultProps = {|
   type: TypeId,
   isDropDisabled: boolean,
   isCombineEnabled: boolean,
+  isCombineOnly: boolean,
   direction: Direction,
   renderClone: ?DraggableChildrenFn,
   ignoreContainerClipping: boolean,

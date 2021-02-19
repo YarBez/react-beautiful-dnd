@@ -238,6 +238,7 @@ const defaultProps = ({
   direction: 'vertical',
   isDropDisabled: false,
   isCombineEnabled: false,
+  isCombineOnly: false,
   ignoreContainerClipping: false,
   renderClone: null,
   getContainerForClone: getBody,

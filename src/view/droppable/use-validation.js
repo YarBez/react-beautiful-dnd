@@ -39,6 +39,10 @@ const shared: CheckFn[] = [
       'isCombineEnabled must be a boolean',
     );
     invariant(
+      typeof props.isCombineOnly === 'boolean',
+      'isCombineOnly must be a boolean',
+    );
+    invariant(
       isBoolean(props.ignoreContainerClipping),
       'ignoreContainerClipping must be a boolean',
     );

@@ -82,6 +82,7 @@ it('should not publish updates to the enabled state when there is no drag', () =
 
   wrapper.setProps({
     isCombineEnabled: false,
+    isCombineOnly: false,
   });
 
   expect(marshal.updateDroppableIsCombineEnabled).not.toHaveBeenCalled();

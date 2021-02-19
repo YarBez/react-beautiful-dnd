@@ -26,6 +26,7 @@ type Args = {|
   isEnabled: boolean,
   isCombineEnabled: boolean,
   isFixedOnPage: boolean,
+  isCombineOnly: boolean,
   direction: 'vertical' | 'horizontal',
   client: BoxModel,
   // is null when in a fixed container
@@ -37,6 +38,7 @@ export default ({
   descriptor,
   isEnabled,
   isCombineEnabled,
+  isCombineOnly,
   isFixedOnPage,
   direction,
   client,
@@ -88,6 +90,7 @@ export default ({
   const dimension: DroppableDimension = {
     descriptor,
     isCombineEnabled,
+    isCombineOnly,
     isFixedOnPage,
     axis,
     isEnabled,

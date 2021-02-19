@@ -70,6 +70,10 @@ export default ({
     pageBorderBox,
   );
 
+  if (destination.isCombineOnly) {
+    return noImpact;
+  }
+
   // checking combine first so we combine before any reordering
   return (
     getCombineImpact({

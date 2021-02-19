@@ -119,6 +119,7 @@ export const makeScrollable = (
     client: newClient,
     page: newPage,
     isCombineEnabled: droppable.isCombineEnabled,
+    isCombineOnly: droppable.isCombineOnly,
     isFixedOnPage: droppable.isFixedOnPage,
     closest: {
       // using old dimensions for frame
@@ -236,6 +237,7 @@ type GetDroppableArgs = {|
   isEnabled?: boolean,
   isFixedOnPage?: boolean,
   isCombineEnabled?: boolean,
+  isCombineOnly?: boolean,
 |};
 
 export const getDroppableDimension = ({
@@ -250,6 +252,7 @@ export const getDroppableDimension = ({
   direction = 'vertical',
   isFixedOnPage = false,
   isCombineEnabled = false,
+  isCombineOnly = false,
 }: GetDroppableArgs): DroppableDimension => {
   const client: BoxModel = createBox({
     borderBox,
@@ -292,6 +295,7 @@ export const getDroppableDimension = ({
     page,
     closest: closestScrollable,
     isCombineEnabled,
+    isCombineOnly,
     isFixedOnPage,
   });
 };

@@ -123,6 +123,23 @@ export const updateDroppableIsEnabled = (
   payload: args,
 });
 
+export type UpdateDroppableIsCombineOnlyArgs = {|
+  id: DroppableId,
+  isCombineOnly: boolean,
+|};
+
+export type UpdateDroppableIsCombineOnlyAction = {|
+  type: 'UPDATE_DROPPABLE_IS_COMBINE_ONLY',
+  payload: UpdateDroppableIsCombineOnlyArgs,
+|};
+
+export const updateDroppableIsCombineOnly = (
+  args: UpdateDroppableIsCombineOnlyArgs,
+): UpdateDroppableIsCombineOnlyAction => ({
+  type: 'UPDATE_DROPPABLE_IS_COMBINE_ONLY',
+  payload: args,
+});
+
 export type UpdateDroppableIsCombineEnabledArgs = {|
   id: DroppableId,
   isCombineEnabled: boolean,
@@ -321,6 +338,7 @@ export type Action =
   | MoveRightAction
   | MoveLeftAction
   | DropPendingAction
+  | UpdateDroppableIsCombineOnlyAction
   | DropAction
   | DropAnimateAction
   | DropAnimationFinishedAction

@@ -223,9 +223,9 @@ export default (registry: Registry, callbacks: Callbacks) => {
     // Droppable changes
     updateDroppableIsEnabled,
     updateDroppableIsCombineEnabled,
+    updateDroppableIsCombineOnly,
     scrollDroppable,
     updateDroppableScroll,
-    updateDroppableIsCombineOnly,
 
     // Entry
     startPublishing,

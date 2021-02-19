@@ -328,6 +328,7 @@ export type Action =
   | UpdateDroppableScrollAction
   | UpdateDroppableIsEnabledAction
   | UpdateDroppableIsCombineEnabledAction
+  | UpdateDroppableIsCombineOnlyAction
   | MoveByWindowScrollAction
   | UpdateViewportMaxScrollAction
   // | PostJumpScrollAction
